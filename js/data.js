@@ -1,5 +1,6 @@
 productService = (function () {
 
+    //Return a product by its ID
     var getById = function (id) {
 
             for (var index in products) {
@@ -14,6 +15,7 @@ productService = (function () {
         }
     },
 
+    //Return all the products
     getAll = function() {
 
         return requestList().then(function() {
@@ -22,6 +24,7 @@ productService = (function () {
         });
     },
 
+    //Update product details through the Webservice
     updateProduct = function(product) {
 
         return fetch(constantsService.constants.API_PROXY_URL + product.id + '', {
@@ -33,6 +36,7 @@ productService = (function () {
         }).catch(err => console.log(err));
     },
 
+    //Update the products object array from the Webservice
     requestList = function () {
 
         return fetch(constantsService.constants.API_PROXY_URL, {
@@ -46,6 +50,7 @@ productService = (function () {
         }).catch(err => console.log(err));
     },
 
+    //Update an individual product in the products object array from the Webservice
     requestProduct = function(index, id) {
 
         return fetch(constantsService.constants.API_PROXY_URL + id + '', {
@@ -65,6 +70,7 @@ productService = (function () {
         }).catch(err => console.log(err));
     },
 
+    //Request a relevant image from the FLICKR API and return the image URL
     requestImage = function(product) {
 
         return fetch(constantsService.constants.FLICKR_API_URL + '' +
@@ -90,6 +96,7 @@ productService = (function () {
         }).catch(err => console.log(err));
     },
 
+    //The products object array
     products = [];
 
     // The public API
