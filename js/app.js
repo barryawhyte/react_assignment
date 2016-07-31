@@ -154,19 +154,19 @@ var ProductPage = React.createClass({
                     <ul className="table-view">
                         <li className="table-view-cell media">
                             <img className="media-object big" src={this.state.product.imageUrl}/>
-                            <div class="content-padded">
+                            <div className="content-padded">
                                 <p>Name</p><input
                                     type="text"
                                     name="name"
                                     value={this.state.product.name}
                                     onChange={this.handleChange}
                                 />
-                                <p>Description</p><input
+                                <p>Description</p><textarea
                                     type="text"
                                     name="description"
                                     value={this.state.product.description}
                                     onChange={this.handleChange}
-                                />
+                                ></textarea>
                                 <p>Amount</p><input
                                 type="text"
                                 name="amount"

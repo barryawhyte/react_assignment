@@ -27,3 +27,9 @@ content-type header. The proxy should be running on the same host as the client 
 Node JS is required to run the API proxy and it can be started from the application root with:
 
 `node proxy/apiProxy.js`
+
+## Notes
+
+- I checked node_modules in so there is no need to run npm install
+- The images are not great but it seems they are the best the FLICKR API can provide, even with
+sort set to relevance
