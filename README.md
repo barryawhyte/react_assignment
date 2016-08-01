@@ -28,6 +28,17 @@ Node JS is required to run the API proxy and it can be started from the applicat
 
 `node proxy/apiProxy.js`
 
+## Installation
+
+The app requires a running web server.
+- Create a new directory in the web root
+- Copy or clone files into this directory
+- [Install nodeJS if not already installed](https://howtonode.org/how-to-install-nodejs)
+- From the project root run the command `node proxy/apiProxy.js` to start the API proxy server
+- Open a browser and point it to http://localhost/project_directory
+
+If you have configured a Vhost and are accessing the client application from a system other than the web server itself, you will need to set the API_PROXY_URL constant in the js/constants.js file in the source code to that of your web server virtual host name. Keep the port set to 5050.
+
 ## Notes
 
 - I checked node_modules in so there is no need to run npm install
